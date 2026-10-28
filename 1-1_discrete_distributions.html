@@ -290,7 +290,7 @@ footer table.tb{font-size:13.5px}
     <tr><td>②</td><td>이항분포 B(n, p)</td><td>정해진 n번 중 성공 횟수</td><td>n을 미리 정해야 한다. "몇 번째에 처음?"은 못 묻는다</td><td>로트 n개 검사</td></tr>
     <tr><td>③</td><td>기하·음이항분포</td><td>첫(r번째) 성공까지 시행 횟수</td><td>시행이 "번"으로 나뉘어야 한다. 아무 때나 일어나는 사건은?</td><td>반응이 나올 때까지 반복</td></tr>
     <tr><td>④</td><td>포아송분포 Poisson(λ)</td><td>단위 시간·공간에 일어난 횟수</td><td>모든 시행이 독립·같은 확률이라고 가정한다. 뽑고 안 돌려놓으면?</td><td>시간당 도착하는 시료 택배</td></tr>
-    <tr><td>⑤</td><td>초기하·다항분포</td><td>비복원으로 뽑은 관심 항목 수 / 범주별 횟수</td><td>모두 "센다". 재는 값 → 1.2, n이 클 때의 종 모양 → 정규분포 편</td><td>봉인 상자 · 등급 분류</td></tr>
+    <tr><td>⑤</td><td>초기하·다항분포</td><td>비복원으로 뽑은 관심 항목 수 / 범주별 횟수</td><td>모두 "센다". 재는 값 → 1.2, n이 클 때의 종 모양 → 정규분포(연속)</td><td>봉인 상자 · 등급 분류</td></tr>
   </table></div>
   <div class="panel" style="padding:10px">
     <div class="cwrap" style="background:#171827">
@@ -304,7 +304,7 @@ footer table.tb{font-size:13.5px}
         <rect x="520" y="10" width="130" height="44" rx="12" fill="#25283a" stroke="#5ee39c"/><text x="585" y="30">④ 포아송</text><text x="585" y="46" font-size="11" fill="#9d9bb8">단위 시간 횟수</text>
         <rect x="520" y="70" width="130" height="44" rx="12" fill="#25283a" stroke="#5ee39c"/><text x="585" y="90">⑤ 초기하</text><text x="585" y="106" font-size="11" fill="#9d9bb8">비복원</text>
         <rect x="520" y="130" width="130" height="44" rx="12" fill="#25283a" stroke="#5ee39c"/><text x="585" y="150">⑤ 다항</text><text x="585" y="166" font-size="11" fill="#9d9bb8">결과가 k가지</text>
-        <rect x="750" y="70" width="120" height="44" rx="12" fill="#1c1e2d" stroke="#9d9bb8" stroke-dasharray="5 4"/><text x="810" y="90" fill="#9d9bb8">정규분포</text><text x="810" y="106" font-size="11" fill="#9d9bb8">준비 중</text>
+        <rect x="750" y="70" width="120" height="44" rx="12" fill="#1c1e2d" stroke="#9d9bb8" stroke-dasharray="5 4"/><text x="810" y="90" fill="#9d9bb8">정규분포</text><text x="810" y="106" font-size="11" fill="#9d9bb8">연속분포</text>
       </g>
       <g stroke="#9d9bb8" stroke-width="1.6" fill="none" marker-end="url(#ar)">
         <path d="M150,155 C200,130 220,95 258,86"/>
@@ -529,7 +529,7 @@ footer table.tb{font-size:13.5px}
     <li><b>평균은 같고 분산은 작다:</b> 초기하 평균 nK/N은 이항 B(n, K/N)과 같다. 분산은 (N − n)/(N − 1)배로 줄어든다. 뽑을수록 남은 상자에 대한 불확실성이 줄기 때문이다. n = N(전부 검사)이면 분산 0: 카드 20장(앞면 10장)을 모두 뽑으면 앞면은 언제나 10장. 같은 20번을 되돌려 놓으며 뽑으면 B(20, 0.5)라 표준편차 √5 ≈ 2.24.</li>
     <li><b>N이 n보다 훨씬 크면 이항과 거의 같다:</b> 위 패널에서 N을 200으로 올리면 초록 막대가 분홍 윤곽에 붙는다.</li>
     <li><b>결과 둘을 풀면 다항:</b> 범주가 k개면 n!/(x<sub>1</sub>!…x<sub>k</sub>!)가 "나열 방법의 수", p<sub>1</sub><sup>x<sub>1</sub></sup>…p<sub>k</sub><sup>x<sub>k</sub></sup>가 "한 나열의 확률". 범주 하나만 보면 X<sub>i</sub> ~ B(n, p<sub>i</sub>)다. 주사위 예는 151,200/6¹⁰ ≈ 0.0025.</li></ol>
-    <p class="lim">이 칸의 한계: 일곱 분포는 모두 0, 1, 2, … 로 <b>세는</b> 값입니다. 키·무게처럼 재는 값, 그리고 n이 커질 때 이항분포가 닮아 가는 종 모양은 연속분포인 정규분포의 몫입니다(정규분포 편, 준비 중). 재는 값에 확률을 붙이는 법은 다음 편 1.2에서 다룹니다.</p></div>
+    <p class="lim">이 칸의 한계: 일곱 분포는 모두 0, 1, 2, … 로 <b>세는</b> 값입니다. 키·무게처럼 재는 값, 그리고 n이 커질 때 이항분포가 닮아 가는 종 모양은 연속분포인 정규분포의 몫입니다. 재는 값에 확률을 붙이는 법은 다음 편 1.2에서 다룹니다.</p></div>
   <details class="math"><summary>수식으로 보기</summary>
     <p>초기하 분산: Var[X] = n·(K/N)·((N − K)/N)·((N − n)/(N − 1)). 마지막 인수가 유한 모집단 보정입니다. TV 예(N = 100, K = 5, n = 10): 평균 0.5, 분산 0.4318, P(X = 3) ≈ 0.0064.</p>
     <p>다항분포의 공분산 Cov(X<sub>i</sub>, X<sub>j</sub>) = −np<sub>i</sub>p<sub>j</sub>(i ≠ j). 총 횟수 n이 고정이라 한 범주가 늘면 다른 범주가 줄어 늘 음수입니다.</p></details>
@@ -582,7 +582,7 @@ footer table.tb{font-size:13.5px}
     <tr><td>초기하</td><td>비복원으로 뽑은 관심 항목 수</td><td>N, K, n</td><td>C(K,k)C(N−K,n−k)/C(N,n)</td><td>nK/N</td><td>n(K/N)(1−K/N)(N−n)/(N−1)</td><td>작은 로트 샘플링 검사</td></tr>
     <tr><td>다항</td><td>범주별 횟수 (x<sub>1</sub>, …, x<sub>k</sub>)</td><td>n, p<sub>1</sub>…p<sub>k</sub></td><td>n!/(x<sub>1</sub>!…x<sub>k</sub>!) Π p<sub>i</sub><sup>x<sub>i</sub></sup></td><td>np<sub>i</sub></td><td>np<sub>i</sub>(1−p<sub>i</sub>)</td><td>등급 분류, 설문 응답</td></tr>
   </table></div>
-  <p class="note">관계: 베르누이 = 이항(n = 1) · 기하 = 음이항(r = 1) · 포아송 ≈ 이항(n → ∞, p → 0, λ = np) · 초기하 ≈ 이항(N이 n보다 훨씬 클 때) · 다항의 한 범주 = 이항 · 이항 ≈ 정규(n이 클 때, 정규분포 편).</p>
+  <p class="note">관계: 베르누이 = 이항(n = 1) · 기하 = 음이항(r = 1) · 포아송 ≈ 이항(n → ∞, p → 0, λ = np) · 초기하 ≈ 이항(N이 n보다 훨씬 클 때) · 다항의 한 범주 = 이항 · 이항 ≈ 정규(n이 클 때).</p>
 
   <h3>검산표 — 대표 계산 문제</h3>
   <p>이 장의 대표 계산 문제를 이 페이지 코드가 공식으로 다시 계산한 값입니다. 손계산이나 다른 자료와 값이 다르면 이 표로 확인하세요.</p>
@@ -792,7 +792,7 @@ var GLOSS={
  '표준편차':['표준편차','기초','분산의 제곱근. 기대값 근처에서 값이 흔히 벗어나는 폭.'],
  '최빈값':['최빈값','②칸','확률(막대)이 가장 높은 값. 이항분포는 대개 ⌊(n+1)p⌋.'],
  '공분산':['공분산','⑤칸','두 변수가 함께 움직이는 정도. 다항분포에서는 −np_i p_j로 늘 음수.'],
- '정규분포':['정규분포','뒤 편','종 모양의 연속분포. n이 큰 이항, λ가 큰 포아송이 닮아 간다.'],
+ '정규분포':['정규분포','참고','종 모양의 연속분포. n이 큰 이항, λ가 큰 포아송이 닮아 간다.'],
  'λ':['λ (람다)','기호','포아송분포의 모수. 단위 시간·공간당 평균 발생 횟수이자 분산.'],
  '시드':['시드','실험','난수의 시작값. 같은 시드면 같은 결과가 나온다.']
 };
@@ -1088,7 +1088,7 @@ function upd2(){var n=s2.n,p=s2.p,k=s2.k,P=prob2(), q=1-p;
   else if(p<0.5) ins.push(['m','p < 0.5: 막대가 왼쪽에 몰리고 오른쪽 꼬리가 깁니다(오른쪽으로 치우침).']);
   else ins.push(['m','p > 0.5: 막대가 오른쪽에 몰리고 왼쪽 꼬리가 깁니다.']);
   if(s2.m==='ge'&&k>=1) ins.push(['a','"k 이상"은 1 − (k − 1 이하)로 계산하면 더할 항이 줄어듭니다.']);
-  if(n>=30&&p>0.1&&p<0.9) ins.push(['g','n이 크고 p가 0이나 1에 너무 가깝지 않아 종 모양에 가깝습니다. 정규분포 근사입니다(정규분포 편).']);
+  if(n>=30&&p>0.1&&p<0.9) ins.push(['g','n이 크고 p가 0이나 1에 너무 가깝지 않아 종 모양에 가깝습니다. 정규분포 근사입니다.']);
   if(n>=20&&p<=0.05) ins.push(['r','n이 크고 p가 작습니다. 이럴 때는 포아송(λ = np = '+fmt(n*p,2)+')으로 근사할 수 있어요(④칸).']);
   insight($('#ins2'),ins);}
 function sync2(){var ks=$('#d2k'); ks.max=s2.n; if(s2.k>s2.n) s2.k=s2.n; ks.value=s2.k; $('#d2n').value=s2.n; $('#d2p').value=Math.round(s2.p*100);

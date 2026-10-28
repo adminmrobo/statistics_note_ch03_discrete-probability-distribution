@@ -2,19 +2,19 @@
 
 | 항목 | 내용 |
 |---|---|
-| 시리즈 | 우연의 과학통계학, 페이지 1개 (1.1-2) — 이 명세서는 시리즈 첫 등록 페이지가 만듦 |
+| 시리즈 | 우연의 과학통계학, 페이지 1개 (1.2) — 이 명세서는 시리즈 첫 등록 페이지가 만듦 |
 | 시즌 | 기본 |
 | 공용 표정 | 캐릭터 팩 96장 (커밋 ea5da3f) · 그림 없음 역할 키 3개 (doc_scale, asst_ledger, asst_board) |
 
 ## 1. 공용 표정 현황
 | 키 | 팩 키 | 상태 | 쓰는 페이지 | 프롬프트 (그림 없음만) |
 |---|---|---|---|---|
-| doc_think | doc_e09 | 팩 | 1.1-2 | — |
-| doc_judge | doc_e10 | 팩 | 1.1-2 | — |
-| doc_magic | doc_e16 | 팩 | 1.1-2 | — |
-| fly_point / fly_arms | fly_e08 / fly_e16 | 팩 | 1.1-2 | — |
-| robo_coin / robo_sigh | robo_e16 / robo_e20 | 팩 | 1.1-2 | — |
-| doc_scale | (doc_e13로 대신) | 그림 없음 | 1.1-2 (무승부 대비) | E13_neutral `prompt_en`에서 몸짓만 *calm gentle smile, holding a perfectly level brass balance scale with both hands* |
+| doc_think | doc_e09 | 팩 | 1.2 | — |
+| doc_judge | doc_e10 | 팩 | 1.2 | — |
+| doc_magic | doc_e16 | 팩 | 1.2 | — |
+| fly_point / fly_arms | fly_e08 / fly_e16 | 팩 | 1.2 | — |
+| robo_coin / robo_sigh | robo_e16 / robo_e20 | 팩 | 1.2 | — |
+| doc_scale | (doc_e13로 대신) | 그림 없음 | 1.2 (무승부 대비) | E13_neutral `prompt_en`에서 몸짓만 *calm gentle smile, holding a perfectly level brass balance scale with both hands* |
 | asst_ledger | (asst_e07로 대신) | 그림 없음 | — | E07 `prompt_en`에서 몸짓만 *serious eyes, holding an open ledger with blank striped pages and a pen* |
 | asst_board | (asst_e16로 대신) | 그림 없음 | — | E16 `prompt_en`에서 몸짓만 *proud smile, holding up a blank three-column scoreboard* |
 
@@ -24,7 +24,7 @@
 | cover_series | J | 밤의 연구실 전경. 박사가 가운데에서 벽의 큰 개념 지도(동그라미와 선, 글자 없음)를 가리키고, 초파리와 Money-Robo가 양쪽에서 올려다보고, 하루가 점수판을 든다. 칠판 한쪽에 주사위와 종 곡선 그림(통계 시리즈 표식) | P1 | 외부 |
 | bg_index | F | 연구실 복도, 문마다 다른 색 빛(각 페이지 = 방) | P1 | 외부 |
 | lineup | G | 넷이 나란히 선 소개 컷, 이름표 자리는 비움 | P1 | 직접 (팩 그림 배치) |
-| thumb_1_1_2 | I | 1.1-2 페이지 카드 | P2 | 직접 (만듦) |
+| thumb_1_2 | I | 1.2 페이지 카드 | P2 | 직접 (만듦) |
 | icon_fly, icon_robo, icon_draw, icon_dq | H | 점수판·지도용 아이콘 | P1 | 직접 (팩 머리 자르기) |
 | og_index | K | 시리즈 표지 축소판 | P3 | 직접 |
 
@@ -36,7 +36,7 @@ detailed 16-bit SNES-era pixel art, limited palette, crisp pixels, dithering sha
 ## 3. 페이지별 대표 그림 모음
 | 페이지 | 앵커 | bg | hero | thumb | 상태 |
 |---|---|---|---|---|---|
-| 1.1-2 확률질량·밀도 함수 | B 측정대 | bg_1_1_2 | sc_1_1_2_hero | thumb_1_1_2 | bg·hero 의뢰, thumb 만듦 |
+| 1.2 확률질량·밀도 함수 | B 측정대 | bg_1_2 | sc_1_2_hero | thumb_1_2 | bg·hero 의뢰, thumb 만듦 |
 
 ## 4. 아이콘
 icon_fly(초파리 머리), icon_robo(로봇 머리), icon_draw(저울), icon_dq(빨간 X) — 32·16px, 팩 192px 그림의 머리를 잘라 직접 만든다. 목차 페이지를 만들 때 함께 넣는다.
@@ -49,5 +49,5 @@ icon_fly(초파리 머리), icon_robo(로봇 머리), icon_draw(저울), icon_dq
     {"key":"bg_index","plate":"F","maker":"external","status":"requested","priority":"P1"},
     {"key":"lineup","plate":"G","maker":"claude","status":"todo","priority":"P1"},
     {"key":"doc_scale","pack":"doc_e13","status":"pack-substitute","priority":"P2"}],
-  "pages": [{"number":"1.1-2","bg":"bg_1_1_2","hero":"sc_1_1_2_hero","thumb":"thumb_1_1_2","duel":"F"}] }
+  "pages": [{"number":"1.2","bg":"bg_1_2","hero":"sc_1_2_hero","thumb":"thumb_1_2","duel":"F"}] }
 ```

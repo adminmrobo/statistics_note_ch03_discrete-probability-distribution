@@ -1,13 +1,19 @@
 {
   "registry": "KG_00_registry",
-  "version": "0.1",
+  "version": "0.2",
   "series": "우연의 과학통계학",
-  "created": "2026-10-28",
-  "note": "이 시리즈의 첫 등록부. 1.1-2 페이지가 만듦. 새 페이지는 같은 개념이면 같은 ID를 쓴다.",
+  "updated": "2026-10-29",
+  "note": "시리즈 등록부. 같은 개념은 같은 ID를 쓴다. 1.1 이산확률분포, 1.2 확률질량함수·밀도함수가 함께 씀.",
+  "site": "https://adminmrobo.github.io/statistics_note_ch03_discrete-probability-distribution/",
   "pages": [
     {
-      "number": "1.1-2",
-      "file": "1-1-2_pmf_pdf.html",
+      "number": "1.1",
+      "file": "1-1_discrete_distributions.html",
+      "title": "성공과 실패를 세는 일곱 가지 방법 — 이산확률분포"
+    },
+    {
+      "number": "1.2",
+      "file": "1-2_pmf_pdf.html",
       "title": "셀 수 있는 확률, 잴 수밖에 없는 확률 — 확률질량함수·확률밀도함수·균일분포"
     }
   ],
@@ -19,7 +25,8 @@
       "en": "random variable",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.1",
+        "1.2"
       ]
     },
     {
@@ -31,29 +38,8 @@
         "lab:concept/random-variable"
       ],
       "pages": [
-        "1.1-2"
-      ]
-    },
-    {
-      "id": "lab:concept/continuous-random-variable",
-      "type": "Concept",
-      "ko": "연속확률변수",
-      "en": "continuous random variable",
-      "broader": [
-        "lab:concept/random-variable"
-      ],
-      "pages": [
-        "1.1-2"
-      ]
-    },
-    {
-      "id": "lab:concept/probability-distribution",
-      "type": "Concept",
-      "ko": "확률분포",
-      "en": "probability distribution",
-      "broader": [],
-      "pages": [
-        "1.1-2"
+        "1.1",
+        "1.2"
       ]
     },
     {
@@ -63,105 +49,52 @@
       "en": "probability mass function (PMF)",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.1",
+        "1.2"
       ]
     },
     {
-      "id": "lab:concept/point-probability-zero",
+      "id": "lab:concept/probability-distribution",
       "type": "Concept",
-      "ko": "점 확률 0",
-      "en": "zero probability of a single point",
+      "ko": "확률분포",
+      "en": "probability distribution",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.1",
+        "1.2"
       ]
     },
     {
-      "id": "lab:concept/interval-probability",
+      "id": "lab:concept/expected-value",
       "type": "Concept",
-      "ko": "구간 확률",
-      "en": "interval probability",
+      "ko": "기대값",
+      "en": "expected value",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.1",
+        "1.2"
       ]
     },
     {
-      "id": "lab:concept/pdf",
+      "id": "lab:concept/variance",
       "type": "Concept",
-      "ko": "확률밀도함수",
-      "en": "probability density function (PDF)",
+      "ko": "분산",
+      "en": "variance",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.1",
+        "1.2"
       ]
     },
     {
-      "id": "lab:concept/probability-density",
+      "id": "lab:concept/cdf",
       "type": "Concept",
-      "ko": "밀도",
-      "en": "probability density",
+      "ko": "누적분포함수",
+      "en": "cumulative distribution function (CDF)",
       "broader": [],
       "pages": [
-        "1.1-2"
-      ]
-    },
-    {
-      "id": "lab:concept/area-as-probability",
-      "type": "Concept",
-      "ko": "넓이 = 확률",
-      "en": "area under the density as probability",
-      "broader": [],
-      "pages": [
-        "1.1-2"
-      ]
-    },
-    {
-      "id": "lab:concept/uniform-distribution",
-      "type": "Concept",
-      "ko": "균일분포",
-      "en": "uniform distribution",
-      "broader": [
-        "lab:concept/probability-distribution"
-      ],
-      "pages": [
-        "1.1-2"
-      ]
-    },
-    {
-      "id": "lab:concept/discrete-uniform-distribution",
-      "type": "Concept",
-      "ko": "이산균등분포",
-      "en": "discrete uniform distribution",
-      "broader": [
-        "lab:concept/uniform-distribution"
-      ],
-      "pages": [
-        "1.1-2"
-      ]
-    },
-    {
-      "id": "lab:concept/continuous-uniform-distribution",
-      "type": "Concept",
-      "ko": "연속균등분포",
-      "en": "continuous uniform distribution",
-      "broader": [
-        "lab:concept/uniform-distribution"
-      ],
-      "pages": [
-        "1.1-2"
-      ]
-    },
-    {
-      "id": "lab:concept/standard-uniform-distribution",
-      "type": "Concept",
-      "ko": "표준연속균등분포",
-      "en": "standard uniform distribution",
-      "broader": [
-        "lab:concept/continuous-uniform-distribution"
-      ],
-      "pages": [
-        "1.1-2"
+        "1.1",
+        "1.2"
       ]
     },
     {
@@ -173,7 +106,474 @@
         "lab:concept/probability-distribution"
       ],
       "pages": [
-        "1.1-2"
+        "1.1",
+        "1.2"
+      ]
+    },
+    {
+      "id": "lab:concept/discrete-probability-distribution",
+      "type": "Concept",
+      "ko": "이산확률분포",
+      "en": "discrete probability distribution",
+      "broader": [
+        "lab:concept/probability-distribution"
+      ],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/bernoulli-trial",
+      "type": "Concept",
+      "ko": "베르누이 시행",
+      "en": "Bernoulli trial",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/bernoulli-distribution",
+      "type": "Concept",
+      "ko": "베르누이분포",
+      "en": "Bernoulli distribution",
+      "broader": [
+        "lab:concept/discrete-probability-distribution"
+      ],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/independence",
+      "type": "Concept",
+      "ko": "독립",
+      "en": "independence",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/binomial-distribution",
+      "type": "Concept",
+      "ko": "이항분포",
+      "en": "binomial distribution",
+      "broader": [
+        "lab:concept/discrete-probability-distribution"
+      ],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/combination",
+      "type": "Concept",
+      "ko": "조합",
+      "en": "combination",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/complement-rule",
+      "type": "Concept",
+      "ko": "여사건",
+      "en": "complement rule",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/mode",
+      "type": "Concept",
+      "ko": "최빈값",
+      "en": "mode",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/standard-deviation",
+      "type": "Concept",
+      "ko": "표준편차",
+      "en": "standard deviation",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/geometric-distribution",
+      "type": "Concept",
+      "ko": "기하분포",
+      "en": "geometric distribution",
+      "broader": [
+        "lab:concept/negative-binomial-distribution"
+      ],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/negative-binomial-distribution",
+      "type": "Concept",
+      "ko": "음이항분포",
+      "en": "negative binomial distribution",
+      "broader": [
+        "lab:concept/discrete-probability-distribution"
+      ],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/memorylessness",
+      "type": "Concept",
+      "ko": "무기억성",
+      "en": "memorylessness",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/poisson-distribution",
+      "type": "Concept",
+      "ko": "포아송분포",
+      "en": "Poisson distribution",
+      "broader": [
+        "lab:concept/discrete-probability-distribution"
+      ],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/poisson-limit",
+      "type": "Concept",
+      "ko": "이항의 포아송 극한",
+      "en": "Poisson limit of the binomial",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/sampling-without-replacement",
+      "type": "Concept",
+      "ko": "비복원 추출",
+      "en": "sampling without replacement",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/sampling-with-replacement",
+      "type": "Concept",
+      "ko": "복원 추출",
+      "en": "sampling with replacement",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/hypergeometric-distribution",
+      "type": "Concept",
+      "ko": "초기하분포",
+      "en": "hypergeometric distribution",
+      "broader": [
+        "lab:concept/discrete-probability-distribution"
+      ],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/finite-population-correction",
+      "type": "Concept",
+      "ko": "유한 모집단 보정",
+      "en": "finite population correction",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/multinomial-distribution",
+      "type": "Concept",
+      "ko": "다항분포",
+      "en": "multinomial distribution",
+      "broader": [
+        "lab:concept/discrete-probability-distribution"
+      ],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/covariance",
+      "type": "Concept",
+      "ko": "공분산",
+      "en": "covariance",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:term/b-n-p",
+      "type": "Term",
+      "ko": "B(n, p)",
+      "en": "B(n, p)",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:term/c-n-k",
+      "type": "Term",
+      "ko": "C(n, k)",
+      "en": "binomial coefficient",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:term/lambda",
+      "type": "Term",
+      "ko": "λ",
+      "en": "lambda (rate)",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:term/r-dgeom",
+      "type": "Term",
+      "ko": "dgeom (R)",
+      "en": "R dgeom",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:term/scipy-geom",
+      "type": "Term",
+      "ko": "scipy geom",
+      "en": "scipy.stats.geom",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:term/r-dnbinom",
+      "type": "Term",
+      "ko": "dnbinom (R)",
+      "en": "R dnbinom",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:term/dhyper-hypergeom",
+      "type": "Term",
+      "ko": "dhyper · hypergeom",
+      "en": "R dhyper / scipy hypergeom",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:term/dbinom-pbinom",
+      "type": "Term",
+      "ko": "dbinom · pbinom",
+      "en": "R dbinom / pbinom",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:method/binomial-five-slots",
+      "type": "Method",
+      "ko": "이항 B(5, 0.4) — 1분 칸 다섯 개",
+      "en": "binomial with 5 one-minute slots",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:method/poisson-lambda-2",
+      "type": "Method",
+      "ko": "포아송 λ = 2",
+      "en": "Poisson with λ=2",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:metric/overlap-area",
+      "type": "Metric",
+      "ko": "겹친 넓이 비율",
+      "en": "overlap of predicted and observed frequencies",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:task/acceptance-sampling",
+      "type": "Task",
+      "ko": "샘플링 합격 판정",
+      "en": "acceptance sampling",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:task/staffing",
+      "type": "Task",
+      "ko": "인력 배치",
+      "en": "staffing for arrivals",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:task/retry-cost",
+      "type": "Task",
+      "ko": "재시도 비용 추정",
+      "en": "retry cost estimation",
+      "broader": [],
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "lab:concept/continuous-random-variable",
+      "type": "Concept",
+      "ko": "연속확률변수",
+      "en": "continuous random variable",
+      "broader": [
+        "lab:concept/random-variable"
+      ],
+      "pages": [
+        "1.2"
+      ]
+    },
+    {
+      "id": "lab:concept/point-probability-zero",
+      "type": "Concept",
+      "ko": "점 확률 0",
+      "en": "zero probability of a single point",
+      "broader": [],
+      "pages": [
+        "1.2"
+      ]
+    },
+    {
+      "id": "lab:concept/interval-probability",
+      "type": "Concept",
+      "ko": "구간 확률",
+      "en": "interval probability",
+      "broader": [],
+      "pages": [
+        "1.2"
+      ]
+    },
+    {
+      "id": "lab:concept/pdf",
+      "type": "Concept",
+      "ko": "확률밀도함수",
+      "en": "probability density function (PDF)",
+      "broader": [],
+      "pages": [
+        "1.2"
+      ]
+    },
+    {
+      "id": "lab:concept/probability-density",
+      "type": "Concept",
+      "ko": "밀도",
+      "en": "probability density",
+      "broader": [],
+      "pages": [
+        "1.2"
+      ]
+    },
+    {
+      "id": "lab:concept/area-as-probability",
+      "type": "Concept",
+      "ko": "넓이 = 확률",
+      "en": "area under the density as probability",
+      "broader": [],
+      "pages": [
+        "1.2"
+      ]
+    },
+    {
+      "id": "lab:concept/uniform-distribution",
+      "type": "Concept",
+      "ko": "균일분포",
+      "en": "uniform distribution",
+      "broader": [
+        "lab:concept/probability-distribution"
+      ],
+      "pages": [
+        "1.2"
+      ]
+    },
+    {
+      "id": "lab:concept/discrete-uniform-distribution",
+      "type": "Concept",
+      "ko": "이산균등분포",
+      "en": "discrete uniform distribution",
+      "broader": [
+        "lab:concept/uniform-distribution"
+      ],
+      "pages": [
+        "1.2"
+      ]
+    },
+    {
+      "id": "lab:concept/continuous-uniform-distribution",
+      "type": "Concept",
+      "ko": "연속균등분포",
+      "en": "continuous uniform distribution",
+      "broader": [
+        "lab:concept/uniform-distribution"
+      ],
+      "pages": [
+        "1.2"
+      ]
+    },
+    {
+      "id": "lab:concept/standard-uniform-distribution",
+      "type": "Concept",
+      "ko": "표준연속균등분포",
+      "en": "standard uniform distribution",
+      "broader": [
+        "lab:concept/continuous-uniform-distribution"
+      ],
+      "pages": [
+        "1.2"
       ]
     },
     {
@@ -185,27 +585,7 @@
         "lab:concept/normal-distribution"
       ],
       "pages": [
-        "1.1-2"
-      ]
-    },
-    {
-      "id": "lab:concept/cdf",
-      "type": "Concept",
-      "ko": "누적분포함수",
-      "en": "cumulative distribution function (CDF)",
-      "broader": [],
-      "pages": [
-        "1.1-2"
-      ]
-    },
-    {
-      "id": "lab:concept/expected-value",
-      "type": "Concept",
-      "ko": "기대값",
-      "en": "expected value",
-      "broader": [],
-      "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -215,17 +595,7 @@
       "en": "median",
       "broader": [],
       "pages": [
-        "1.1-2"
-      ]
-    },
-    {
-      "id": "lab:concept/variance",
-      "type": "Concept",
-      "ko": "분산",
-      "en": "variance",
-      "broader": [],
-      "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -235,7 +605,7 @@
       "en": "skewness",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -245,7 +615,7 @@
       "en": "slope of the CDF equals the density",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -257,7 +627,7 @@
         "lab:concept/cdf"
       ],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -267,7 +637,7 @@
       "en": "f(x)",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -277,7 +647,7 @@
       "en": "F(x)",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -287,7 +657,7 @@
       "en": "U(a, b)",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -297,7 +667,7 @@
       "en": "R dunif / punif",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -307,7 +677,7 @@
       "en": "scipy.stats.uniform",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -317,7 +687,7 @@
       "en": "interval probability calculation",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -327,7 +697,7 @@
       "en": "within-tolerance fraction",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -337,7 +707,7 @@
       "en": "interval hit rate",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -347,7 +717,7 @@
       "en": "bet on a wide interval [0.5, 2.5]",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     },
     {
@@ -357,35 +727,131 @@
       "en": "bet on the density peak [−0.1, 0.1]",
       "broader": [],
       "pages": [
-        "1.1-2"
+        "1.2"
       ]
     }
   ],
   "works": [
     {
+      "id": "wikipediabernoulli",
+      "title": "Bernoulli distribution",
+      "iri": "lab:work/wikipediabernoulli",
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "wikipediabinomial",
+      "title": "Binomial distribution",
+      "iri": "lab:work/wikipediabinomial",
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "wikipediageometric",
+      "title": "Geometric distribution",
+      "iri": "lab:work/wikipediageometric",
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "wikipedianegbinom",
+      "title": "Negative binomial distribution",
+      "iri": "lab:work/wikipedianegbinom",
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "wikipediapoisson",
+      "title": "Poisson distribution",
+      "iri": "lab:work/wikipediapoisson",
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "wikipediamultinomial",
+      "title": "Multinomial distribution",
+      "iri": "lab:work/wikipediamultinomial",
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "rcoreteamhyper",
+      "title": "The Hypergeometric Distribution",
+      "iri": "lab:work/rcoreteamhyper",
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "rcoreteamgeom",
+      "title": "The Geometric Distribution",
+      "iri": "lab:work/rcoreteamgeom",
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "rcoreteamnegbinom",
+      "title": "The Negative Binomial Distribution",
+      "iri": "lab:work/rcoreteamnegbinom",
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
+      "id": "scipystats118",
+      "title": "scipy.stats (SciPy 1.18.1)",
+      "iri": "lab:work/scipystats118",
+      "pages": [
+        "1.1"
+      ]
+    },
+    {
       "id": "wikipediacontinuousuniform",
       "title": "Continuous uniform distribution",
-      "iri": "lab:work/wikipediacontinuousuniform"
+      "iri": "lab:work/wikipediacontinuousuniform",
+      "pages": [
+        "1.2"
+      ]
     },
     {
       "id": "wikipediadiscreteuniform",
       "title": "Discrete uniform distribution",
-      "iri": "lab:work/wikipediadiscreteuniform"
+      "iri": "lab:work/wikipediadiscreteuniform",
+      "pages": [
+        "1.2"
+      ]
     },
     {
       "id": "wikipedia975percentile",
       "title": "97.5th percentile point",
-      "iri": "lab:work/wikipedia975percentile"
+      "iri": "lab:work/wikipedia975percentile",
+      "pages": [
+        "1.2"
+      ]
     },
     {
       "id": "rcoreteamuniform",
       "title": "The Uniform Distribution",
-      "iri": "lab:work/rcoreteamuniform"
+      "iri": "lab:work/rcoreteamuniform",
+      "pages": [
+        "1.2"
+      ]
     },
     {
       "id": "scipystatsuniform",
       "title": "scipy.stats.uniform",
-      "iri": "lab:work/scipystatsuniform"
+      "iri": "lab:work/scipystatsuniform",
+      "pages": [
+        "1.2"
+      ]
     }
-  ]
+  ],
+  "label_conflicts": []
 }
