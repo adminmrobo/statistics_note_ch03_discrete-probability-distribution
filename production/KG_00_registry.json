@@ -1,0 +1,391 @@
+{
+  "registry": "KG_00_registry",
+  "version": "0.1",
+  "series": "우연의 과학통계학",
+  "created": "2026-10-28",
+  "note": "이 시리즈의 첫 등록부. 1.1-2 페이지가 만듦. 새 페이지는 같은 개념이면 같은 ID를 쓴다.",
+  "pages": [
+    {
+      "number": "1.1-2",
+      "file": "1-1-2_pmf_pdf.html",
+      "title": "셀 수 있는 확률, 잴 수밖에 없는 확률 — 확률질량함수·확률밀도함수·균일분포"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "lab:concept/random-variable",
+      "type": "Concept",
+      "ko": "확률변수",
+      "en": "random variable",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/discrete-random-variable",
+      "type": "Concept",
+      "ko": "이산확률변수",
+      "en": "discrete random variable",
+      "broader": [
+        "lab:concept/random-variable"
+      ],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/continuous-random-variable",
+      "type": "Concept",
+      "ko": "연속확률변수",
+      "en": "continuous random variable",
+      "broader": [
+        "lab:concept/random-variable"
+      ],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/probability-distribution",
+      "type": "Concept",
+      "ko": "확률분포",
+      "en": "probability distribution",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/pmf",
+      "type": "Concept",
+      "ko": "확률질량함수",
+      "en": "probability mass function (PMF)",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/point-probability-zero",
+      "type": "Concept",
+      "ko": "점 확률 0",
+      "en": "zero probability of a single point",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/interval-probability",
+      "type": "Concept",
+      "ko": "구간 확률",
+      "en": "interval probability",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/pdf",
+      "type": "Concept",
+      "ko": "확률밀도함수",
+      "en": "probability density function (PDF)",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/probability-density",
+      "type": "Concept",
+      "ko": "밀도",
+      "en": "probability density",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/area-as-probability",
+      "type": "Concept",
+      "ko": "넓이 = 확률",
+      "en": "area under the density as probability",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/uniform-distribution",
+      "type": "Concept",
+      "ko": "균일분포",
+      "en": "uniform distribution",
+      "broader": [
+        "lab:concept/probability-distribution"
+      ],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/discrete-uniform-distribution",
+      "type": "Concept",
+      "ko": "이산균등분포",
+      "en": "discrete uniform distribution",
+      "broader": [
+        "lab:concept/uniform-distribution"
+      ],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/continuous-uniform-distribution",
+      "type": "Concept",
+      "ko": "연속균등분포",
+      "en": "continuous uniform distribution",
+      "broader": [
+        "lab:concept/uniform-distribution"
+      ],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/standard-uniform-distribution",
+      "type": "Concept",
+      "ko": "표준연속균등분포",
+      "en": "standard uniform distribution",
+      "broader": [
+        "lab:concept/continuous-uniform-distribution"
+      ],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/normal-distribution",
+      "type": "Concept",
+      "ko": "정규분포",
+      "en": "normal distribution",
+      "broader": [
+        "lab:concept/probability-distribution"
+      ],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/standard-normal-distribution",
+      "type": "Concept",
+      "ko": "표준정규분포",
+      "en": "standard normal distribution",
+      "broader": [
+        "lab:concept/normal-distribution"
+      ],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/cdf",
+      "type": "Concept",
+      "ko": "누적분포함수",
+      "en": "cumulative distribution function (CDF)",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/expected-value",
+      "type": "Concept",
+      "ko": "기대값",
+      "en": "expected value",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/median",
+      "type": "Concept",
+      "ko": "중앙값",
+      "en": "median",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/variance",
+      "type": "Concept",
+      "ko": "분산",
+      "en": "variance",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/skewness",
+      "type": "Concept",
+      "ko": "비대칭도",
+      "en": "skewness",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/cdf-slope-is-density",
+      "type": "Concept",
+      "ko": "누적의 기울기 = 밀도",
+      "en": "slope of the CDF equals the density",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:concept/ecdf",
+      "type": "Concept",
+      "ko": "경험 누적분포",
+      "en": "empirical CDF (ECDF)",
+      "broader": [
+        "lab:concept/cdf"
+      ],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:term/f-x",
+      "type": "Term",
+      "ko": "f(x)",
+      "en": "f(x)",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:term/cap-f-x",
+      "type": "Term",
+      "ko": "F(x)",
+      "en": "F(x)",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:term/u-a-b",
+      "type": "Term",
+      "ko": "U(a, b)",
+      "en": "U(a, b)",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:term/dunif-punif",
+      "type": "Term",
+      "ko": "dunif · punif",
+      "en": "R dunif / punif",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:term/scipy-uniform",
+      "type": "Term",
+      "ko": "scipy uniform(loc, scale)",
+      "en": "scipy.stats.uniform",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:task/interval-probability-calculation",
+      "type": "Task",
+      "ko": "구간 확률 계산",
+      "en": "interval probability calculation",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:task/tolerance-check",
+      "type": "Task",
+      "ko": "규격(공차) 안 비율 계산",
+      "en": "within-tolerance fraction",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:metric/interval-hit-rate",
+      "type": "Metric",
+      "ko": "구간 적중 비율",
+      "en": "interval hit rate",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:method/bet-wide-interval",
+      "type": "Method",
+      "ko": "넓은 구간에 걸기",
+      "en": "bet on a wide interval [0.5, 2.5]",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    },
+    {
+      "id": "lab:method/bet-density-peak",
+      "type": "Method",
+      "ko": "밀도 꼭대기에 걸기",
+      "en": "bet on the density peak [−0.1, 0.1]",
+      "broader": [],
+      "pages": [
+        "1.1-2"
+      ]
+    }
+  ],
+  "works": [
+    {
+      "id": "wikipediacontinuousuniform",
+      "title": "Continuous uniform distribution",
+      "iri": "lab:work/wikipediacontinuousuniform"
+    },
+    {
+      "id": "wikipediadiscreteuniform",
+      "title": "Discrete uniform distribution",
+      "iri": "lab:work/wikipediadiscreteuniform"
+    },
+    {
+      "id": "wikipedia975percentile",
+      "title": "97.5th percentile point",
+      "iri": "lab:work/wikipedia975percentile"
+    },
+    {
+      "id": "rcoreteamuniform",
+      "title": "The Uniform Distribution",
+      "iri": "lab:work/rcoreteamuniform"
+    },
+    {
+      "id": "scipystatsuniform",
+      "title": "scipy.stats.uniform",
+      "iri": "lab:work/scipystatsuniform"
+    }
+  ]
+}

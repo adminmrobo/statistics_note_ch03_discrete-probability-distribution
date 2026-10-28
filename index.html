@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>우연의 과학통계학</title>
+<meta name="description" content="박사·하루·초파리 연구원·Money-Robo가 진행하는 확률·통계 인터랙티브 해설 시리즈. 직접 돌려 보는 시뮬레이션과 대결로 개념을 익힙니다.">
+<meta name="author" content="안상선">
+<meta property="og:type" content="website">
+<meta property="og:title" content="우연의 과학통계학">
+<meta property="og:description" content="연구실 캐릭터와 직접 돌려 보는 확률·통계 해설 시리즈">
+<meta property="og:image" content="assets/og_1_1_2.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#13141f; --panel:#1c1e2d; --panel2:#25283a; --rule:#363a52;
+  --text:#eceaf3; --muted:#9d9bb8;
+  --stain:#d672d6; --gfp:#5ee39c; --eye:#f0604d; --amber:#f1b646; --info:#82b8ff;
+  --c-doc:#b07cff; --c-asst:#ff86b8; --c-fly:#ef5b5b; --c-robo:#57d0dc;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.7 "IBM Plex Sans KR","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR",system-ui,sans-serif}
+h1,h2,h3,p,li{word-break:keep-all;overflow-wrap:anywhere}
+a{color:var(--info)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+nav.top{position:sticky;top:0;z-index:10;height:54px;display:flex;align-items:center;gap:14px;padding:0 16px;background:rgba(19,20,31,.82);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.logo{font-weight:700;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.logo i{width:18px;height:20px;background:var(--gfp);clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%)}
+nav.top .links{display:flex;gap:4px;margin-left:auto;overflow-x:auto}
+nav.top .links a{color:var(--muted);text-decoration:none;font-size:14px;padding:6px 10px;border-radius:8px;white-space:nowrap}
+nav.top .links a:hover{background:var(--panel2);color:var(--text)}
+header.hero{position:relative;overflow:hidden;padding:64px 0 48px;border-bottom:1px solid var(--rule);background:radial-gradient(1100px 480px at 85% 0%,#2a1f52 0,transparent 60%),linear-gradient(180deg,#1b1533,var(--bg))}
+header.hero::before{content:"";position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='48.5' viewBox='0 0 28 48.5'%3E%3Cpath d='M14 0l14 8.08v16.17L14 32.33 0 24.25V8.08z M14 32.33v16.17' fill='none' stroke='%23d672d6' stroke-opacity='.18'/%3E%3C/svg%3E");-webkit-mask-image:radial-gradient(circle at 92% 8%,#000 0,transparent 55%);mask-image:radial-gradient(circle at 92% 8%,#000 0,transparent 55%);pointer-events:none}
+.eyebrow{color:var(--gfp);font-weight:700;font-size:14px;letter-spacing:.04em;position:relative}
+h1{font-size:clamp(34px,5.5vw,60px);line-height:1.12;margin:.15em 0 .3em;position:relative}
+.lead{color:#d6d4e6;max-width:640px;position:relative;margin:0}
+.q{color:var(--amber);font-weight:700;font-size:clamp(17px,2vw,20px);position:relative;margin:.8em 0 0}
+section{padding:52px 0;border-bottom:1px solid var(--rule)}
+h2{font-size:clamp(24px,3vw,32px);margin:0 0 .5em}
+.cast{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cast>div{background:var(--panel);border:1px solid var(--rule);border-top:3px solid;border-radius:14px;padding:14px;text-align:center}
+.cast img{width:96px;height:96px;object-fit:contain;background:var(--panel2);border-radius:14px}
+.cast b{display:block;margin-top:6px}
+.cast p{margin:.3em 0 0;font-size:14px;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--rule);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color .15s,transform .15s}
+a.card:hover{border-color:var(--gfp);transform:translateY(-2px)}
+.card img{width:100%;height:auto;aspect-ratio:3/2;object-fit:cover;display:block;background:var(--panel2)}
+.card .body{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card .no{font-size:13px;color:var(--gfp);font-weight:700}
+.card h3{margin:0;font-size:19px;line-height:1.35}
+.card p{margin:0;font-size:14.5px;color:#cfcde0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:8px}
+.tag{font-size:12px;padding:2px 9px;border-radius:99px;border:1px solid var(--rule);color:var(--muted);background:var(--panel2)}
+.tag.f{color:var(--c-fly);border-color:rgba(239,91,91,.45)}
+.card.soon{border-style:dashed;opacity:.75}
+.card.soon .ph{aspect-ratio:3/2;display:flex;align-items:center;justify-content:center;background:repeating-linear-gradient(135deg,var(--panel2) 0 12px,var(--panel) 12px 24px);color:var(--muted);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.steps>div{background:var(--panel);border:1px solid var(--rule);border-radius:14px;padding:16px}
+.steps h3{margin:0 0 .3em;font-size:16px}
+.steps p{margin:0;font-size:14.5px;color:#cfcde0}
+.n{display:inline-flex;width:24px;height:24px;border-radius:50%;background:var(--panel2);color:var(--gfp);align-items:center;justify-content:center;font-size:13px;margin-right:6px}
+footer{padding:36px 0 60px;color:var(--muted);font-size:14px}
+footer p{margin:.3em 0}
+@media (max-width:860px){.cast{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:1fr}}
+@media (max-width:520px){.wrap{padding:0 16px}.cards{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){a.card{transition:none}a.card:hover{transform:none}}
+</style>
+</head>
+<body>
+<nav class="top" aria-label="바로가기">
+  <div class="logo"><i aria-hidden="true"></i>우연의 과학통계학</div>
+  <div class="links"><a href="#pages">해설 페이지</a><a href="#cast">등장인물</a><a href="#how">보는 법</a></div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">인터랙티브 확률·통계 해설 시리즈</div>
+    <h1>우연의 과학통계학</h1>
+    <p class="lead">밤의 연구실에서 박사·하루·초파리 연구원·Money-Robo가 확률과 통계를 하나씩 풀어 갑니다. 페이지마다 직접 움직여 보는 시뮬레이션, 초파리와 Money-Robo의 대결, 확인 퀴즈가 들어 있습니다. 설치 없이 브라우저에서 바로 열립니다.</p>
+    <p class="q">외우기 전에 돌려 보고, 믿기 전에 재 봅니다.</p>
+  </div>
+</header>
+
+<section id="pages">
+<div class="wrap">
+  <h2>해설 페이지</h2>
+  <div class="cards">
+    <!-- 새 페이지를 추가할 때는 아래 <a class="card"> 블록 하나를 복사해 고친다 (README 참고) -->
+    <a class="card" href="1-1-2_pmf_pdf.html">
+      <img src="assets/thumb_1_1_2.png" alt="막대 그래프와 넓이를 칠한 종 곡선이 그려진 칠판 앞의 초파리 연구원과 Money-Robo" width="600" height="400" loading="lazy">
+      <div class="body">
+        <div class="no">1.1 (2)</div>
+        <h3>셀 수 있는 확률, 잴 수밖에 없는 확률</h3>
+        <p>확률질량함수·확률밀도함수·균일분포·누적분포함수. 한 점의 확률이 0인데 확률은 어디에 있을까?</p>
+        <div class="tags"><span class="tag">PMF</span><span class="tag">PDF</span><span class="tag">CDF</span><span class="tag">균일분포</span><span class="tag f">대결: 초파리 승</span><span class="tag">퀴즈 12</span></div>
+      </div>
+    </a>
+    <div class="card soon" aria-label="다음 편 준비 중">
+      <div class="ph">다음 편 준비 중</div>
+      <div class="body">
+        <div class="no">다음 편</div>
+        <h3>정규분포 — 공식으로 풀리지 않는 넓이</h3>
+        <p>표와 함수(pnorm, norm.cdf)로 정규분포의 넓이를 재 봅니다.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="cast">
+<div class="wrap">
+  <h2>등장인물</h2>
+  <div class="cast">
+    <div style="border-top-color:var(--c-doc)"><img src="assets/characters/doc_e08.webp" alt="" width="96" height="96"><b style="color:var(--c-doc)">박사</b><p>해설과 판정. 판정은 숫자대로.</p></div>
+    <div style="border-top-color:var(--c-asst)"><img src="assets/characters/asst_e13.webp" alt="" width="96" height="96"><b style="color:var(--c-asst)">하루(조수)</b><p>실험을 돌리고 숫자를 발표.</p></div>
+    <div style="border-top-color:var(--c-fly)"><img src="assets/characters/fly_e10.webp" alt="" width="96" height="96"><b style="color:var(--c-fly)">초파리 연구원</b><p>의심하는 쪽. "정말 그럴까?"</p></div>
+    <div style="border-top-color:var(--c-robo)"><img src="assets/characters/robo_e13.webp" alt="" width="96" height="96"><b style="color:var(--c-robo)">Money-Robo</b><p>확신하는 쪽. 높은 숫자에 건다.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="how">
+<div class="wrap">
+  <h2>보는 법</h2>
+  <div class="steps">
+    <div><h3><span class="n">1</span>개념 사다리</h3><p>쉬운 칸에서 시작해, 각 칸의 한계가 다음 칸을 부릅니다. 칸마다 직접 만지는 시뮬레이션과 "행동으로 보기"가 있어요.</p></div>
+    <div><h3><span class="n">2</span>대결과 판정</h3><p>초파리(의심)와 Money-Robo(확신)가 서로 다른 선택을 하고, 페이지 안의 계산으로 승패가 갈립니다. 결과 보기 전에 먼저 맞혀 보세요.</p></div>
+    <div><h3><span class="n">3</span>퀴즈와 지식 색인</h3><p>칸마다 확인 퀴즈, 노란 점선 밑줄은 용어 풀이. 맨 끝의 지식 색인과 꾸러미에서 개념 지도와 참고문헌을 내려받을 수 있습니다.</p></div>
+  </div>
+</div>
+</section>
+
+<footer>
+<div class="wrap">
+  <p>저자: 안상선 · 캐릭터 그림: adminmrobo/fruitfly-lab-expressions</p>
+  <p>모든 시뮬레이션은 시드를 고정한 설명용 모형입니다. 각 페이지의 출처는 페이지 맨 아래 출처 표에 있습니다.</p>
+</div>
+</footer>
+</body>
+</html>
